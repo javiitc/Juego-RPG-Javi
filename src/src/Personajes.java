@@ -12,6 +12,7 @@ public class Personajes {
         int dmgAtaqueEspecial;
         int dmgExpansionDominio;
 
+        int seleccionPJ;
         int yenes;
         String [] inventario = new String[10];
 
@@ -84,5 +85,7 @@ public class Personajes {
         this.dmgAtaqueFisico = 55;
 
     }
+
+    public void check_PJ ()
 }
 
