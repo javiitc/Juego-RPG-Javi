@@ -1,13 +1,25 @@
 public class Personajes {
-    public static void main(String[] args) {
-        int [] vidaPersonajes = {150, 100, 120, 180};
-        String [] expansionesDominio = {"Vacío Infinito", "Amor mutuo y verdadero", "Golpe al Alma",  "Lanza del Cielo Invertida"};
 
-        int energiaMaldita = 0;
-        double multiplicador = 0.0;
-        int dmgAtaqueFisico = 0;
-        int yenes = 0;
-        int dmgAtaqueEspecial = 0;
+        int vidaPersonajes;
+        String expansionesDominio;
 
+        int energiaMaldita;
+        double multiplicador;
+        int dmgAtaqueFisico;
+        int dmgAtaqueEspecial;
+        int dmgExpansionDominio;
+
+        int yenes;
+        String [] inventario = new String[10];
+
+    public Personajes(int vidaPersonajes, String expansionesDominio, int energiaMaldita, double multiplicador, int dmgAtaqueFisico, int dmgAtaqueEspecial, int dmgExpansionDominio) {
+        this.vidaPersonajes = vidaPersonajes;
+        this.expansionesDominio = expansionesDominio;
+        this.energiaMaldita = energiaMaldita;
+        this.multiplicador = multiplicador;
+        this.dmgAtaqueFisico = dmgAtaqueFisico;
+        this.dmgAtaqueEspecial = dmgAtaqueEspecial;
+        this.dmgExpansionDominio = dmgExpansionDominio;
     }
 }
+
