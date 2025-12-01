@@ -24,10 +24,11 @@ public class Main {
 
         pnjSeleccionado.check_PJ(seleccionPersonaje);
 
-        System.out.println("Vida máxima: " + pnjSeleccionado.vidaPersonajes + "\n" +
+        System.out.println( pnjSeleccionado.descripcionPersonaje + "\n" +
+                           "Vida máxima: " + pnjSeleccionado.vidaPersonajes + "\n" +
                            "Energia Maldita: " + pnjSeleccionado.energiaMaldita + "\n" +
                            "Daño Ataque fisico: " + pnjSeleccionado.dmgAtaqueFisico + "\n" +
-                           "Daño Ataque especial: " + pnjSeleccionado.dmgAtaqueEspecial + "\n" +
-                           "Daño Expansión de Dominio: " + pnjSeleccionado.dmgExpansionDominio);
+                           "Ataque especial: " + pnjSeleccionado.tecnicaEspecial + " | Daño: " + pnjSeleccionado.dmgAtaqueEspecial + "\n" +
+                           "Expansión de Dominio: " + pnjSeleccionado.expansionesDominio + " | Daño: " + pnjSeleccionado.dmgExpansionDominio);
     }
 }

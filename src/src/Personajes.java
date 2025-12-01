@@ -16,15 +16,11 @@ public class Personajes {
         int yenes;
         String [] inventario = new String[10];
 
-    public void Satoru_Gojo (int seleccionPersonaje, String descripcionPersonaje, String expansionesDominio, String tecnicaEspecial) {
-        this.seleccionPersonaje = seleccionPersonaje;
-        this.descripcionPersonaje = "Satoru Gojo, hechicero de grado especial, poseedor de los seis ojos y el ritual del infinito. Se le conoce como el hechicero más fuerte de la actualidad";
-        this.expansionesDominio = "Vacío Infinito";
-        this.tecnicaEspecial = "Ritual del vacío: Purpura";
-        int yenes = 5;
-        String [] inventario = new String[10];
-    }
+
     public void Stats_Satoru_Gojo () {
+        descripcionPersonaje = "Satoru Gojo, hechicero de grado especial, poseedor de los seis ojos y el ritual del infinito. Se le conoce como el hechicero más fuerte de la actualidad";
+        expansionesDominio = "Vacío Infinito";
+        tecnicaEspecial = "Ritual del vacío: Purpura";
         vidaPersonajes = 230;
         energiaMaldita = 150;
         multiplicador = 1.5f;
@@ -44,6 +40,7 @@ public class Personajes {
         dmgAtaqueFisico = 25;
         dmgAtaqueEspecial = 100;
         dmgExpansionDominio = 140;
+
     }
 
     public void Stats_Yuji_Itadori () {
