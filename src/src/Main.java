@@ -6,7 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
-        int seleccionPersonaje = sc.nextInt();
+        int seleccionPersonaje;
 
         System.out.println("=== Bienvenido al mundo de Jujutsu Kaisen ===. \n" +
                 "Este mundo esta lleno de maldiciones que nacen de las malas emociones de las personas. Tu deber como hechicero es derrotar a todas las maldiciones posibles y no morir en el intento, \n" +
@@ -22,6 +22,12 @@ public class Main {
 
         Personajes pnjSeleccionado = new Personajes();
 
-        pnjSeleccionado.check_PJ(pnjSeleccionado.);
+        pnjSeleccionado.check_PJ(seleccionPersonaje);
+
+        System.out.println("Vida máxima: " + pnjSeleccionado.vidaPersonajes + "\n" +
+                           "Energia Maldita: " + pnjSeleccionado.energiaMaldita + "\n" +
+                           "Daño Ataque fisico: " + pnjSeleccionado.dmgAtaqueFisico + "\n" +
+                           "Daño Ataque especial: " + pnjSeleccionado.dmgAtaqueEspecial + "\n" +
+                           "Daño Expansión de Dominio: " + pnjSeleccionado.dmgExpansionDominio);
     }
 }
