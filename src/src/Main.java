@@ -19,5 +19,9 @@ public class Main {
                 "4. Toji Fushiguro");
 
         seleccionPersonaje = sc.nextInt();
+
+        Personajes pnjSeleccionado = new Personajes();
+
+        pnjSeleccionado.check_PJ(pnjSeleccionado.);
     }
 }
