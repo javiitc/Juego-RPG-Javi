@@ -30,6 +30,8 @@ public class Personajes {
         dmgAtaqueFisico = 50;
         dmgAtaqueEspecial = 120;
         dmgExpansionDominio = 180;
+        inventario = new String [10];
+        yenes = 5;
     }
 
     public void Stats_Yuta_Okkotsu () {
@@ -44,6 +46,8 @@ public class Personajes {
         dmgAtaqueFisico = 25;
         dmgAtaqueEspecial = 100;
         dmgExpansionDominio = 140;
+        inventario = new String [10];
+        yenes = 5;
 
     }
 
@@ -59,6 +63,8 @@ public class Personajes {
         dmgAtaqueFisico = 40;
         dmgAtaqueEspecial = 150;
         dmgExpansionDominio = 80;
+        inventario = new String [10];
+        yenes = 5;
     }
 
     public void Stats_Toji_Fushiguro () {
@@ -73,6 +79,8 @@ public class Personajes {
         dmgAtaqueFisico = 60;
         dmgAtaqueEspecial = 130;
         dmgExpansionDominio = 150;
+        inventario = new String [10];
+        yenes = 5;
     }
 
     public void check_PJ (int pnjElegido) {
