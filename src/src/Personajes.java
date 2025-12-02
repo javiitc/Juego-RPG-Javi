@@ -5,6 +5,7 @@ public class Personajes {
         String expansionesDominio;
         String tecnicaEspecial;
         String nombre;
+        String nombreBatalla;
 
         int energiaMaldita;
         float multiplicador;
@@ -88,17 +89,20 @@ public class Personajes {
 
     public Personajes (String tipoEnemigo) {
         if (tipoEnemigo.equals("Segundo Grado")){
-            this.nombre = "Maldición de segundo grado";
+            this.nombre = " una Maldición de segundo grado";
+            this.nombreBatalla = " Maldición de Segundo grado ";
             this.vidaPersonajes = 300;
             this.multiplicador = 1.3f;
             this.dmgAtaqueFisico = 25;
         } else if (tipoEnemigo.equals("Primer Grado")) {
-            this.nombre = "Maldición de primer grado";
+            this.nombre = " una Maldición de primer grado";
+            this.nombreBatalla = " Maldición de Primer Grado ";
             this.vidaPersonajes = 550;
             this.multiplicador = 1.6f;
             this.dmgAtaqueFisico = 35;
         } else if (tipoEnemigo.equals("Sukuna")) {
-            this.nombre = "Sukuna, Rey de las maldiciones y el hechicero más fuerte de la historia";
+            this.nombre = " Sukuna, Rey de las maldiciones y el hechicero más fuerte de la historia";
+            this.nombreBatalla = " Sukuna ";
             this.vidaPersonajes = 1000;
             this.multiplicador = 2.0f;
             this.dmgAtaqueFisico = 55;

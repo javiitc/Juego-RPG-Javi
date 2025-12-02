@@ -15,8 +15,8 @@ public class Main {
         enemigos [0] = new Personajes("Segundo Grado");
         enemigos [1] = new Personajes("Primer Grado");
         enemigos [2] = new Personajes("Sukuna");
-
-        System.out.println(enemigos[2]);
+        int enemigoAleatorio = random.nextInt(3);
+        Personajes enemigoAzar = enemigos[enemigoAleatorio];
 
         String [] objetos = {"Ritual Inverso Maldito", "Bendición de Utahime", "Potenciador de Utahime y el director Gakuganji", "Ritual Inverso Maldito (energía maldita)"};
 
@@ -38,6 +38,7 @@ public class Main {
             pnjSeleccionado.check_PJ(seleccionPersonaje);
 
             System.out.println( pnjSeleccionado.descripcionPersonaje + "\n" +
+                    "------------------------------------------------------- \n" +
                     "Vida máxima: " + pnjSeleccionado.vidaPersonajes + "\n" +
                     "Energia Maldita: " + pnjSeleccionado.energiaMaldita + "\n" +
                     "Daño Ataque fisico: " + pnjSeleccionado.dmgAtaqueFisico + "\n" +
@@ -58,6 +59,13 @@ public class Main {
 
         System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones \n" +
                           "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
-        System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, te has encontrado ");
+
+        while (true) {
+            System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, y se ha puesto en tu camino" + enemigoAzar.nombre);
+            System.out.println("=====" + enemigoAzar.nombreBatalla + "=====");
+            System.out.println("PS: " + enemigoAzar.vidaPersonajes);
+            break;
+        }
+
     }
 }
