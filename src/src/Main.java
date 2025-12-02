@@ -10,6 +10,8 @@ public class Main {
         boolean confirmacion = true;
         int confirmar ;
         Personajes pnjSeleccionado = new Personajes();
+        String [] enemigos = {};
+        int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio};
 
 
         System.out.println("=== Bienvenido al mundo de Jujutsu Kaisen ===. \n" +
@@ -45,6 +47,7 @@ public class Main {
             }
         }
 
-        System.out.println(pnjSeleccionado.descripcionPersonaje);
+        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles, de segundo o primer grado, e incluso al rey de las maldiciones en caso de que te encuentres con él. Buena suerte!");
+
     }
 }

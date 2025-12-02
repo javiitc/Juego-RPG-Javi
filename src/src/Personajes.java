@@ -18,6 +18,8 @@ public class Personajes {
 
 
     public void Stats_Satoru_Gojo () {
+
+        nombre = "Satoru Gojo";
         descripcionPersonaje = "Satoru Gojo, hechicero de grado especial, poseedor de los seis ojos y el ritual del infinito. Se le conoce como el hechicero más fuerte de la actualidad";
         expansionesDominio = "Vacío Infinito";
         tecnicaEspecial = "Ritual del vacío: Purpura";
@@ -31,6 +33,7 @@ public class Personajes {
 
     public void Stats_Yuta_Okkotsu () {
 
+        nombre = "Yuta Okkotsu";
         descripcionPersonaje = "Yuta Okkotsu, hechicero de grado especial, capaz de invocar a la reina de las maldiciones, Rikka. Desprende una energia maldita mayor a la del hechicero mas fuerte de la actualidad.";
         vidaPersonajes = 130;
         expansionesDominio = "Amor Mutuo y Verdadero";
@@ -45,6 +48,7 @@ public class Personajes {
 
     public void Stats_Yuji_Itadori () {
 
+        nombre = "Yuji Itadori";
         descripcionPersonaje = "Yuji Itadori, discipulo de Gojo, tiene una resistencia y fuerza sobrehumanas. Debido a sus capcidades y su origen, fue el unico recipiente válido para contener a Sukuna, el Rey de las maldiciones. ";
         vidaPersonajes = 180;
         expansionesDominio = "Separador de almas";
@@ -58,6 +62,7 @@ public class Personajes {
 
     public void Stats_Toji_Fushiguro () {
 
+        nombre = "Toji Fushiguro";
         descripcionPersonaje = "Toji Fushiguro. Exiliado del clan zenin por no tener energia maldita, pero siendo el humano perfecto, el unico capaz de haber dejado al borde la muerte al hechicero más fuerte de la actualidad.";
         vidaPersonajes = 150;
         expansionesDominio = "Lanza del Cielo Invertida";
