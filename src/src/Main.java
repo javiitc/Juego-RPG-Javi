@@ -12,12 +12,13 @@ public class Main {
         Personajes pnjSeleccionado = new Personajes();
         String [] enemigos = {};
         int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio};
+        String [] objetos = {"Ritual Inverso Maldito", "Bendición de Utahime", "Potenciador de Utahime y el director Gakuganji", "Ritual Inverso Maldito (energía maldita)"};
 
 
         System.out.println("=== Bienvenido al mundo de Jujutsu Kaisen ===. \n" +
-                "Este mundo esta lleno de maldiciones que nacen de las malas emociones de las personas. Tu deber como hechicero es derrotar a todas las maldiciones posibles y no morir en el intento, \n" +
-                "pero cuidado, hay maldiciones muy fuertes que solo un hechicero de primer grado o de grado especial podría hacerles frente. \n" +
-                "Derrota a las que puedas, y espero que no te encuentres con el rey de las maldiciones, Sukuna");
+                "Este mundo esta lleno de maldiciones que nacen de las malas emociones de las personas. Tu deber como hechicero es exorcizar a todas las maldiciones posibles y no morir en el intento, \n" +
+                "Ahora mismo esta ocurriendo un incidente en Shibuya, las maldiciones están atacando la ciudad, y se necesitan a todos los hechiceros posibles para arreglar la situación. \n" +
+                "Exorciza a todas las maldiciones que puedas, y cuidado con el rey de las maldiciones, Sukuna");
 
         while (confirmacion) {
             System.out.println("Ahora elige un hechicero para continuar (Ten en cuenta que cada uno tiene caracteristicas y ataques unicos)");
@@ -47,7 +48,7 @@ public class Main {
             }
         }
 
-        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles, de segundo o primer grado, e incluso al rey de las maldiciones en caso de que te encuentres con él. Buena suerte!");
+        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones en caso de que te encuentres con él. Buena suerte!");
 
     }
 }
