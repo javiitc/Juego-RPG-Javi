@@ -48,8 +48,9 @@ public class Main {
         }
 
         int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio};
-        
-        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones (si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
-        System.out.println("\n" + "Has llegado a Shibuya, mientras te adentrabas más en la ciudad, te has encontrado " + );
+
+        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones \n" +
+                          "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
+        System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, te has encontrado ");
     }
 }
