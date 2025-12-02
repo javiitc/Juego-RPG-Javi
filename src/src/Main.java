@@ -9,8 +9,15 @@ public class Main {
         int seleccionPersonaje;
         boolean confirmacion = true;
         int confirmar ;
+
         Personajes pnjSeleccionado = new Personajes();
-        String [] enemigos = {};
+        Personajes [] enemigos = new Personajes[3];
+        enemigos [0] = new Personajes("Segundo Grado");
+        enemigos [1] = new Personajes("Primer Grado");
+        enemigos [2] = new Personajes("Sukuna");
+
+        System.out.println(enemigos[2]);
+
         String [] objetos = {"Ritual Inverso Maldito", "Bendición de Utahime", "Potenciador de Utahime y el director Gakuganji", "Ritual Inverso Maldito (energía maldita)"};
 
 

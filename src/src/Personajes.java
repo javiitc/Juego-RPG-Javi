@@ -73,7 +73,7 @@ public class Personajes {
         dmgAtaqueEspecial = 130;
         dmgExpansionDominio = 150;
     }
-    
+
     public void check_PJ (int pnjElegido) {
         if (pnjElegido == 1) {
             Stats_Satoru_Gojo();
@@ -88,21 +88,25 @@ public class Personajes {
 
     public Personajes (String tipoEnemigo) {
         if (tipoEnemigo.equals("Segundo Grado")){
-            System.out.println("Maldición de segundo grado");
+            this.nombre = "Maldición de segundo grado";
             this.vidaPersonajes = 300;
             this.multiplicador = 1.3f;
             this.dmgAtaqueFisico = 25;
         } else if (tipoEnemigo.equals("Primer Grado")) {
-            System.out.println("Maldición de primer grado");
+            this.nombre = "Maldición de primer grado";
             this.vidaPersonajes = 550;
             this.multiplicador = 1.6f;
             this.dmgAtaqueFisico = 35;
         } else if (tipoEnemigo.equals("Sukuna")) {
-            System.out.println("Sukuna, Rey de las maldiciones y el hechicero más fuerte de la historia");
+            this.nombre = "Sukuna, Rey de las maldiciones y el hechicero más fuerte de la historia";
             this.vidaPersonajes = 1000;
             this.multiplicador = 2.0f;
             this.dmgAtaqueFisico = 55;
         }
+    }
+
+    public Personajes () {
+        //Está vacío porque se necesita este constructor para luego la elección de personaje en el Main
     }
 }
 
