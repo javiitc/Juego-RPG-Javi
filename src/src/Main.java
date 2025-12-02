@@ -11,7 +11,6 @@ public class Main {
         int confirmar ;
         Personajes pnjSeleccionado = new Personajes();
         String [] enemigos = {};
-        int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio};
         String [] objetos = {"Ritual Inverso Maldito", "Bendición de Utahime", "Potenciador de Utahime y el director Gakuganji", "Ritual Inverso Maldito (energía maldita)"};
 
 
@@ -48,7 +47,9 @@ public class Main {
             }
         }
 
-        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones en caso de que te encuentres con él. Buena suerte!");
-
+        int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio};
+        
+        System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones (si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
+        System.out.println("\n" + "Has llegado a Shibuya, mientras te adentrabas más en la ciudad, te has encontrado " + );
     }
 }
