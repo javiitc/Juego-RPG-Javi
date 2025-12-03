@@ -9,6 +9,7 @@ public class Main {
         int seleccionPersonaje;
         boolean confirmacion = true;
         int confirmar ;
+        int eleccionBatalla;
 
         Personajes pnjSeleccionado = new Personajes();
         Personajes [] enemigos = new Personajes[3];
@@ -58,6 +59,7 @@ public class Main {
         }
 
         int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio, (int) pnjSeleccionado.multiplicadorCritico};
+        int [] iteraccionEnemigo = {enemigoAzar.dmgAtaqueFisico, (int) enemigoAzar.multiplicadorCritico};
 
         System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones \n" +
                           "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
@@ -66,13 +68,23 @@ public class Main {
             System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, y se ha puesto en tu camino" + enemigoAzar.nombre);
             System.out.println("=====" + enemigoAzar.nombreBatalla + "=====");
             System.out.println("PS: " + enemigoAzar.vidaPersonajes);
-            System.out.println("========================" + pnjSeleccionado.nombre + "========================");
+            System.out.println("====== " + pnjSeleccionado.nombre + " ======");
             System.out.println("PS: " + pnjSeleccionado.vidaPersonajes + " | Energia Maldita: " + pnjSeleccionado.energiaMaldita);
             System.out.println("1. Ataque Fisico \n" +
                                "2. Técnica especial: " + pnjSeleccionado.tecnicaEspecial + "\n" +
                                "3. Expansión de dominio: " + pnjSeleccionado.expansionesDominio + "\n" +
                                "4. Abrir inventario" + "\n" +
-                               "5. Rendirse");
+                               "5. Bloqueo" + "\n" +
+                               "6. Rendirse");
+
+            eleccionBatalla = sc.nextInt();
+
+            switch (eleccionBatalla) {
+                case 1:
+                    System.out.println("Has atacado al enemigo!");
+                    enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgAtaqueFisico;
+                    System.out.println(enemigoAzar.vidaPersonajes);
+            }
             break;
         }
 

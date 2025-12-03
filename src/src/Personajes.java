@@ -26,7 +26,7 @@ public class Personajes {
         tecnicaEspecial = "Ritual del vacío: Purpura";
         vidaPersonajes = 230;
         energiaMaldita = 160;
-        dmgAtaqueFisico = 50;
+        dmgAtaqueFisico = 70;
         multiplicadorCritico = dmgAtaqueFisico * 1.5f;
         dmgAtaqueEspecial = 120;
         dmgExpansionDominio = 180;
@@ -42,7 +42,7 @@ public class Personajes {
         expansionesDominio = "Amor Mutuo y Verdadero";
         tecnicaEspecial = "Mimetismo: Discurso maldito";
         energiaMaldita = 220;
-        dmgAtaqueFisico = 25;
+        dmgAtaqueFisico = 55;
         multiplicadorCritico = dmgAtaqueFisico * 1.2f;
         dmgAtaqueEspecial = 100;
         dmgExpansionDominio = 140;
@@ -75,7 +75,7 @@ public class Personajes {
         expansionesDominio = "Lanza del Cielo Invertida";
         tecnicaEspecial = "Playful Cloud";
         energiaMaldita = 70;
-        dmgAtaqueFisico = 60;
+        dmgAtaqueFisico = 75;
         multiplicadorCritico = dmgAtaqueFisico * 2.2f;
         dmgAtaqueEspecial = 130;
         dmgExpansionDominio = 150;
