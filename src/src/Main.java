@@ -175,6 +175,7 @@ public class Main {
 
                 case 7:
                     System.out.println("Has decidido retirarte de la batalla y la maldición se ha ido a por ciudadanos inocentes.");
+                    pnjSeleccionado.yenes -= 3;
                     break;
             }
 
