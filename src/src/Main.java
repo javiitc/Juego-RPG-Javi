@@ -69,7 +69,7 @@ public class Main {
                     "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
 
             while (true) {
-                System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, y se ha puesto en tu camino" + enemigoAzar.nombre);
+                System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, se ha puesto en tu camino" + enemigoAzar.nombre);
                 System.out.println("=====" + enemigoAzar.nombreBatalla + "=====");
                 System.out.println("PS: " + enemigoAzar.vidaPersonajes);
                 System.out.println("====== " + pnjSeleccionado.nombre + " ======");
@@ -129,7 +129,7 @@ public class Main {
                         ataqueEnemigo = random.nextInt(2);
                         dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
                         if (ataqueEnemigo == 0) {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
+                            System.out.println("La " + enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
                             pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         } else {
@@ -226,6 +226,10 @@ public class Main {
                         System.out.println("Has decidido retirarte de la batalla y la maldición se ha ido a por ciudadanos inocentes.");
                         pnjSeleccionado.yenes -= 3;
                         break;
+                }
+
+                if (enemigoAzar.vidaPersonajes <= 0) {
+
                 }
             }
         }
