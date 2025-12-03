@@ -2,6 +2,7 @@ public class Personajes {
 
         String descripcionPersonaje;
         int vidaPersonajes;
+        int vidaMaxima;
         String expansionesDominio;
         String tecnicaEspecial;
         String nombre;
@@ -25,6 +26,7 @@ public class Personajes {
         expansionesDominio = "Vacío Infinito";
         tecnicaEspecial = "Ritual del vacío: Purpura";
         vidaPersonajes = 230;
+        vidaMaxima = 230;
         energiaMaldita = 150;
         dmgAtaqueFisico = 70;
         multiplicadorCritico = dmgAtaqueFisico * 1.5f;
@@ -38,7 +40,8 @@ public class Personajes {
 
         nombre = "Yuta Okkotsu";
         descripcionPersonaje = "Yuta Okkotsu, hechicero de grado especial, capaz de invocar a la reina de las maldiciones, Rikka. Desprende una energia maldita mayor a la del hechicero mas fuerte de la actualidad.";
-        vidaPersonajes = 130;
+        vidaPersonajes = 150;
+        vidaMaxima = 150;
         expansionesDominio = "Amor Mutuo y Verdadero";
         tecnicaEspecial = "Mimetismo: Discurso maldito";
         energiaMaldita = 250;
@@ -56,6 +59,7 @@ public class Personajes {
         nombre = "Yuji Itadori";
         descripcionPersonaje = "Yuji Itadori, discipulo de Gojo, tiene una resistencia y fuerza sobrehumanas. Debido a sus capcidades y su origen, fue el unico recipiente válido para contener a Sukuna, el Rey de las maldiciones. ";
         vidaPersonajes = 180;
+        vidaMaxima = 180;
         expansionesDominio = "Separador de almas";
         tecnicaEspecial = "Black Flash";
         energiaMaldita = 100;
@@ -71,9 +75,10 @@ public class Personajes {
 
         nombre = "Toji Fushiguro";
         descripcionPersonaje = "Toji Fushiguro. Exiliado del clan zenin por no tener energia maldita, pero siendo el humano perfecto, el unico capaz de haber dejado al borde la muerte al hechicero más fuerte de la actualidad.";
-        vidaPersonajes = 150;
+        vidaPersonajes = 170;
+        vidaMaxima = 170;
         expansionesDominio = "Lanza del Cielo Invertida";
-        tecnicaEspecial = "Playful Cloud";
+        tecnicaEspecial = "Nube Intinerante";
         energiaMaldita = 50;
         dmgAtaqueFisico = 75;
         multiplicadorCritico = dmgAtaqueFisico * 2.2f;

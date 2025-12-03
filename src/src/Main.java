@@ -194,7 +194,7 @@ public class Main {
                                     pnjSeleccionado.dmgExpansionDominio += 35;
                                 } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[3]){
                                     System.out.println("Has consumido un dedo de Sukuna! Tu energia maldita ha sido recuperada");
-                                    
+
                                 }
                                 // Aquí puedes agregar los efectos de cada objeto
                                 // Por ejemplo:
