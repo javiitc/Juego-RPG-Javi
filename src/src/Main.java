@@ -46,6 +46,7 @@ public class Main {
                     "Expansión de Dominio: " + pnjSeleccionado.expansionesDominio + " | Daño: " + pnjSeleccionado.dmgExpansionDominio + "\n" +
                     "Daño de golpe crítico: " + (int) pnjSeleccionado.multiplicadorCritico);
 
+            System.out.println("-------------------------------------------------------");
             System.out.println("Confirmar selección?");
             System.out.println("1. SI | 2. NO");
 
@@ -65,6 +66,13 @@ public class Main {
             System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, y se ha puesto en tu camino" + enemigoAzar.nombre);
             System.out.println("=====" + enemigoAzar.nombreBatalla + "=====");
             System.out.println("PS: " + enemigoAzar.vidaPersonajes);
+            System.out.println("========================" + pnjSeleccionado.nombre + "========================");
+            System.out.println("PS: " + pnjSeleccionado.vidaPersonajes + " | Energia Maldita: " + pnjSeleccionado.energiaMaldita);
+            System.out.println("1. Ataque Fisico \n" +
+                               "2. Técnica especial: " + pnjSeleccionado.tecnicaEspecial + "\n" +
+                               "3. Expansión de dominio: " + pnjSeleccionado.expansionesDominio + "\n" +
+                               "4. Abrir inventario" + "\n" +
+                               "5. Rendirse");
             break;
         }
 
