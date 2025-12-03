@@ -75,9 +75,10 @@ public class Main {
             System.out.println("1. Ataque Fisico \n" +
                     "2. Técnica maldita: " + pnjSeleccionado.tecnicaEspecial + "\n" +
                     "3. Expansión de dominio: " + pnjSeleccionado.expansionesDominio + "\n" +
-                    "4. Abrir inventario" + "\n" +
-                    "5. Dominio Simple: Bloqueo" + "\n" +
-                    "6. Rendirse");
+                    "4. Potenciar golpe con energia Maldita (critico)" + "\n" +
+                    "5. Abrir inventario" + "\n" +
+                    "6. Dominio Simple: Bloqueo" + "\n" +
+                    "7. Rendirse");
 
             eleccionBatalla = sc.nextInt();
 
@@ -120,6 +121,24 @@ public class Main {
                     System.out.println("Expansion de Dominio: " + pnjSeleccionado.expansionesDominio);
                     System.out.println(enemigoAzar.nombreBatalla + "ha sido encerrado en tu Expansion de dominio y ha recibido un daño descomunal!");
                     enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgExpansionDominio;
+
+                    ataqueEnemigo = random.nextInt(2);
+                    dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
+                    if (ataqueEnemigo == 0) {
+                        System.out.println("La " + enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
+                        pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
+                        System.out.println("Daño recibido: " + dmgEnemigo);
+                    } else {
+                        System.out.println("La " + enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                        pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
+                        System.out.println("Daño recibido: " + dmgEnemigo);
+                    }
+                    break;
+
+                case 4:
+                    System.out.println("Has usado Energia Maldita para potenciar el golpe!");
+                    enemigoAzar.vidaPersonajes -= (int) pnjSeleccionado.multiplicadorCritico;
+                    System.out.println("El enemigo ha recibido: " + pnjSeleccionado.multiplicadorCritico + " de daño!");
 
                     ataqueEnemigo = random.nextInt(2);
                     dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];

@@ -25,11 +25,11 @@ public class Personajes {
         expansionesDominio = "Vacío Infinito";
         tecnicaEspecial = "Ritual del vacío: Purpura";
         vidaPersonajes = 230;
-        energiaMaldita = 160;
+        energiaMaldita = 150;
         dmgAtaqueFisico = 70;
         multiplicadorCritico = dmgAtaqueFisico * 1.5f;
         dmgAtaqueEspecial = 120;
-        dmgExpansionDominio = 180;
+        dmgExpansionDominio = 250;
         inventario = new String [10];
         yenes = 5;
     }
@@ -41,11 +41,11 @@ public class Personajes {
         vidaPersonajes = 130;
         expansionesDominio = "Amor Mutuo y Verdadero";
         tecnicaEspecial = "Mimetismo: Discurso maldito";
-        energiaMaldita = 220;
+        energiaMaldita = 250;
         dmgAtaqueFisico = 55;
         multiplicadorCritico = dmgAtaqueFisico * 1.2f;
         dmgAtaqueEspecial = 100;
-        dmgExpansionDominio = 140;
+        dmgExpansionDominio = 180;
         inventario = new String [10];
         yenes = 5;
 
@@ -58,11 +58,11 @@ public class Personajes {
         vidaPersonajes = 180;
         expansionesDominio = "Separador de almas";
         tecnicaEspecial = "Black Flash";
-        energiaMaldita = 80;
+        energiaMaldita = 100;
         dmgAtaqueFisico = 40;
         multiplicadorCritico = dmgAtaqueFisico * 1.8f;
         dmgAtaqueEspecial = 150;
-        dmgExpansionDominio = 80;
+        dmgExpansionDominio = 120;
         inventario = new String [10];
         yenes = 5;
     }
@@ -74,7 +74,7 @@ public class Personajes {
         vidaPersonajes = 150;
         expansionesDominio = "Lanza del Cielo Invertida";
         tecnicaEspecial = "Playful Cloud";
-        energiaMaldita = 70;
+        energiaMaldita = 50;
         dmgAtaqueFisico = 75;
         multiplicadorCritico = dmgAtaqueFisico * 2.2f;
         dmgAtaqueEspecial = 130;
