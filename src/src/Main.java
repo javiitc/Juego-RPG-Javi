@@ -179,14 +179,30 @@ public class Main {
 
                             if (pnjSeleccionado.inventario[eleccionInventario] != null) {
                                 System.out.println("Has usado: " + pnjSeleccionado.inventario[eleccionInventario]);
-                                
+
+                                if (pnjSeleccionado.inventario[eleccionInventario] == objetos[0]){
+                                    System.out.println("Has usado el Ritual Inverso Maldito para recuperar salud");
+                                    pnjSeleccionado.vidaPersonajes += 80;
+                                } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[1]){
+                                    System.out.println("Has recibido la bendición de Utahime, tu daño fisico y de técnica Maldita ha aumentado!");
+                                    pnjSeleccionado.dmgAtaqueFisico += 25;
+                                    pnjSeleccionado.dmgAtaqueEspecial += 15;
+                                } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[2]){
+                                    System.out.println("El director Gakuganji y Utahime te estan ayudando con sus rituales! Tu daño fisico, de técnica Maldita y de la expansión de dominio ha aumentado considerablemente!");
+                                    pnjSeleccionado.dmgAtaqueFisico += 50;
+                                    pnjSeleccionado.dmgAtaqueEspecial += 40;
+                                    pnjSeleccionado.dmgExpansionDominio += 35;
+                                } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[3]){
+                                    System.out.println("Has consumido un dedo de Sukuna! Tu energia maldita ha sido recuperada");
+                                    
+                                }
                                 // Aquí puedes agregar los efectos de cada objeto
                                 // Por ejemplo:
                                 // if (objetoUsado.equals("Ritual Inverso Maldito")) {
                                 //     pnjSeleccionado.vidaPersonajes += 50;
                                 // }
 
-                                pnjSeleccionado.inventario[seleccionObjeto - 1] = null; // Eliminar objeto usado
+                                pnjSeleccionado.inventario[eleccionInventario] = null; // Eliminar objeto usado
                             }
                         }
                     }
