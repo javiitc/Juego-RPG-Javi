@@ -227,9 +227,7 @@ public class Main {
                         pnjSeleccionado.yenes -= 3;
                         break;
                 }
-
             }
         }
-
     }
 }
