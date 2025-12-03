@@ -157,6 +157,39 @@ public class Main {
                     break;
 
                 case 5:
+                    System.out.println("==== Inventario ====");
+                    boolean tieneObjetos = false;
+
+                    for (int i = 0; i < pnjSeleccionado.inventario.length; i++) {
+                        if (pnjSeleccionado.inventario[i] != null) {
+                            System.out.println((i + 1) + ". " + pnjSeleccionado.inventario[i]);
+                            tieneObjetos = true;
+                        }
+                    }
+
+                    if (!tieneObjetos) {
+                        System.out.println("Tu inventario está vacío");
+                    } else {
+                        System.out.println("Selecciona un objeto para usar (o 0 para salir):");
+                        int seleccionObjeto = sc.nextInt();
+
+                        if (seleccionObjeto > 0 && seleccionObjeto <= pnjSeleccionado.inventario.length) {
+
+                            int eleccionInventario = seleccionObjeto - 1;
+
+                            if (pnjSeleccionado.inventario[eleccionInventario] != null) {
+                                System.out.println("Has usado: " + pnjSeleccionado.inventario[eleccionInventario]);
+                                
+                                // Aquí puedes agregar los efectos de cada objeto
+                                // Por ejemplo:
+                                // if (objetoUsado.equals("Ritual Inverso Maldito")) {
+                                //     pnjSeleccionado.vidaPersonajes += 50;
+                                // }
+
+                                pnjSeleccionado.inventario[seleccionObjeto - 1] = null; // Eliminar objeto usado
+                            }
+                        }
+                    }
                     break;
 
                 case 6:
