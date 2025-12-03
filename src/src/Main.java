@@ -103,6 +103,7 @@ public class Main {
                 case 2:
                     System.out.println("Tecnica Maldita: " + pnjSeleccionado.tecnicaEspecial + " ha hecho un impacto directo!");
                     enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgAtaqueEspecial;
+                    pnjSeleccionado.energiaMaldita -=30;
 
                     ataqueEnemigo = random.nextInt(2);
                     dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
@@ -121,6 +122,7 @@ public class Main {
                     System.out.println("Expansion de Dominio: " + pnjSeleccionado.expansionesDominio);
                     System.out.println(enemigoAzar.nombreBatalla + "ha sido encerrado en tu Expansion de dominio y ha recibido un daño descomunal!");
                     enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgExpansionDominio;
+                    pnjSeleccionado.energiaMaldita -=50;
 
                     ataqueEnemigo = random.nextInt(2);
                     dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
@@ -139,6 +141,7 @@ public class Main {
                     System.out.println("Has usado Energia Maldita para potenciar el golpe!");
                     enemigoAzar.vidaPersonajes -= (int) pnjSeleccionado.multiplicadorCritico;
                     System.out.println("El enemigo ha recibido: " + pnjSeleccionado.multiplicadorCritico + " de daño!");
+                    pnjSeleccionado.energiaMaldita -=20;
 
                     ataqueEnemigo = random.nextInt(2);
                     dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
@@ -151,6 +154,27 @@ public class Main {
                         pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
                         System.out.println("Daño recibido: " + dmgEnemigo);
                     }
+                    break;
+
+                case 5:
+                    break;
+
+                case 6:
+                    System.out.println("Has hecho uso del Dominio Simple para bloquear el ataque enemigo");
+
+                    ataqueEnemigo = random.nextInt(2);
+                    dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
+                    if (ataqueEnemigo == 0) {
+                        System.out.println("La " + enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
+                        System.out.println("Debido al Dominio Simple no has recibido daño.");
+                    } else {
+                        System.out.println("La " + enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                        System.out.println("Debido al Dominio Simple no has recibido daño.");
+                    }
+                    break;
+
+                case 7:
+                    System.out.println("Has decidido retirarte de la batalla y la maldición se ha ido a por ciudadanos inocentes.");
                     break;
             }
 
