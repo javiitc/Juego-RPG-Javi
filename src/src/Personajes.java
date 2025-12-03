@@ -9,6 +9,7 @@ public class Personajes {
         String nombreBatalla;
 
         int energiaMaldita;
+        int energiaMalditaMax;
         float multiplicadorCritico;
         int dmgAtaqueFisico;
         int dmgAtaqueEspecial;
@@ -28,6 +29,7 @@ public class Personajes {
         vidaPersonajes = 230;
         vidaMaxima = 230;
         energiaMaldita = 150;
+        energiaMalditaMax = 150;
         dmgAtaqueFisico = 70;
         multiplicadorCritico = dmgAtaqueFisico * 1.5f;
         dmgAtaqueEspecial = 120;
@@ -45,6 +47,7 @@ public class Personajes {
         expansionesDominio = "Amor Mutuo y Verdadero";
         tecnicaEspecial = "Mimetismo: Discurso maldito";
         energiaMaldita = 250;
+        energiaMalditaMax = 250;
         dmgAtaqueFisico = 55;
         multiplicadorCritico = dmgAtaqueFisico * 1.2f;
         dmgAtaqueEspecial = 100;
@@ -63,6 +66,7 @@ public class Personajes {
         expansionesDominio = "Separador de almas";
         tecnicaEspecial = "Black Flash";
         energiaMaldita = 100;
+        energiaMalditaMax = 100;
         dmgAtaqueFisico = 40;
         multiplicadorCritico = dmgAtaqueFisico * 1.8f;
         dmgAtaqueEspecial = 150;
@@ -80,6 +84,7 @@ public class Personajes {
         expansionesDominio = "Lanza del Cielo Invertida";
         tecnicaEspecial = "Nube Intinerante";
         energiaMaldita = 50;
+        energiaMalditaMax = 50;
         dmgAtaqueFisico = 75;
         multiplicadorCritico = dmgAtaqueFisico * 2.2f;
         dmgAtaqueEspecial = 130;

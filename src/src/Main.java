@@ -183,6 +183,9 @@ public class Main {
                                 if (pnjSeleccionado.inventario[eleccionInventario] == objetos[0]){
                                     System.out.println("Has usado el Ritual Inverso Maldito para recuperar salud");
                                     pnjSeleccionado.vidaPersonajes += 80;
+                                    if (pnjSeleccionado.vidaPersonajes > pnjSeleccionado.vidaMaxima) {
+                                        System.out.println("Has recuperado el máximo de vida");
+                                    }
                                 } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[1]){
                                     System.out.println("Has recibido la bendición de Utahime, tu daño fisico y de técnica Maldita ha aumentado!");
                                     pnjSeleccionado.dmgAtaqueFisico += 25;
@@ -194,7 +197,7 @@ public class Main {
                                     pnjSeleccionado.dmgExpansionDominio += 35;
                                 } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[3]){
                                     System.out.println("Has consumido un dedo de Sukuna! Tu energia maldita ha sido recuperada");
-
+                                    pnjSeleccionado.energiaMaldita = pnj
                                 }
                                 // Aquí puedes agregar los efectos de cada objeto
                                 // Por ejemplo:
