@@ -8,7 +8,7 @@ public class Personajes {
         String nombreBatalla;
 
         int energiaMaldita;
-        float multiplicador;
+        float multiplicadorCritico;
         int dmgAtaqueFisico;
         int dmgAtaqueEspecial;
         int dmgExpansionDominio;
@@ -25,9 +25,9 @@ public class Personajes {
         expansionesDominio = "Vacío Infinito";
         tecnicaEspecial = "Ritual del vacío: Purpura";
         vidaPersonajes = 230;
-        energiaMaldita = 150;
-        multiplicador = 1.5f;
+        energiaMaldita = 160;
         dmgAtaqueFisico = 50;
+        multiplicadorCritico = dmgAtaqueFisico * 1.5f;
         dmgAtaqueEspecial = 120;
         dmgExpansionDominio = 180;
         inventario = new String [10];
@@ -42,8 +42,8 @@ public class Personajes {
         expansionesDominio = "Amor Mutuo y Verdadero";
         tecnicaEspecial = "Mimetismo: Discurso maldito";
         energiaMaldita = 220;
-        multiplicador = 1.2f;
         dmgAtaqueFisico = 25;
+        multiplicadorCritico = dmgAtaqueFisico * 1.2f;
         dmgAtaqueEspecial = 100;
         dmgExpansionDominio = 140;
         inventario = new String [10];
@@ -59,8 +59,8 @@ public class Personajes {
         expansionesDominio = "Separador de almas";
         tecnicaEspecial = "Black Flash";
         energiaMaldita = 80;
-        multiplicador = 1.8f;
         dmgAtaqueFisico = 40;
+        multiplicadorCritico = dmgAtaqueFisico * 1.8f;
         dmgAtaqueEspecial = 150;
         dmgExpansionDominio = 80;
         inventario = new String [10];
@@ -75,8 +75,8 @@ public class Personajes {
         expansionesDominio = "Lanza del Cielo Invertida";
         tecnicaEspecial = "Playful Cloud";
         energiaMaldita = 70;
-        multiplicador = 2.2f;
         dmgAtaqueFisico = 60;
+        multiplicadorCritico = dmgAtaqueFisico * 2.2f;
         dmgAtaqueEspecial = 130;
         dmgExpansionDominio = 150;
         inventario = new String [10];
@@ -100,20 +100,20 @@ public class Personajes {
             this.nombre = " una Maldición de segundo grado";
             this.nombreBatalla = " Maldición de Segundo grado ";
             this.vidaPersonajes = 300;
-            this.multiplicador = 1.3f;
             this.dmgAtaqueFisico = 25;
+            this.multiplicadorCritico = dmgAtaqueFisico * 1.3f;
         } else if (tipoEnemigo.equals("Primer Grado")) {
             this.nombre = " una Maldición de primer grado";
             this.nombreBatalla = " Maldición de Primer Grado ";
             this.vidaPersonajes = 550;
-            this.multiplicador = 1.6f;
             this.dmgAtaqueFisico = 35;
+            this.multiplicadorCritico = dmgAtaqueFisico * 1.6f;
         } else if (tipoEnemigo.equals("Sukuna")) {
             this.nombre = " Sukuna, Rey de las maldiciones y el hechicero más fuerte de la historia";
             this.nombreBatalla = " Sukuna ";
             this.vidaPersonajes = 1000;
-            this.multiplicador = 2.0f;
             this.dmgAtaqueFisico = 55;
+            this.multiplicadorCritico = 2.0f;
         }
     }
 

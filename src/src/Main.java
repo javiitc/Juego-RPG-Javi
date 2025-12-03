@@ -43,7 +43,8 @@ public class Main {
                     "Energia Maldita: " + pnjSeleccionado.energiaMaldita + "\n" +
                     "Daño Ataque fisico: " + pnjSeleccionado.dmgAtaqueFisico + "\n" +
                     "Ataque especial: " + pnjSeleccionado.tecnicaEspecial + " | Daño: " + pnjSeleccionado.dmgAtaqueEspecial + "\n" +
-                    "Expansión de Dominio: " + pnjSeleccionado.expansionesDominio + " | Daño: " + pnjSeleccionado.dmgExpansionDominio + "\n");
+                    "Expansión de Dominio: " + pnjSeleccionado.expansionesDominio + " | Daño: " + pnjSeleccionado.dmgExpansionDominio + "\n" +
+                    "Daño de golpe crítico: " + (int) pnjSeleccionado.multiplicadorCritico);
 
             System.out.println("Confirmar selección?");
             System.out.println("1. SI | 2. NO");
@@ -55,7 +56,7 @@ public class Main {
             }
         }
 
-        int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio};
+        int [] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio, (int) pnjSeleccionado.multiplicadorCritico};
 
         System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones \n" +
                           "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
