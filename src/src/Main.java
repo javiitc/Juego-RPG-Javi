@@ -13,6 +13,7 @@ public class Main {
         int ataqueEnemigo;
         int dmgEnemigo;
         boolean juego = true;
+        boolean pelea = true;
 
         Personajes pnjSeleccionado = new Personajes();
         Personajes[] enemigos = new Personajes[3];
@@ -68,7 +69,8 @@ public class Main {
             System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones \n" +
                     "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
             System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, se ha puesto en tu camino" + enemigoAzar.nombre);
-            while (true) {
+
+            while (pelea) {
                 System.out.println("=====" + enemigoAzar.nombreBatalla + "=====");
                 System.out.println("PS: " + enemigoAzar.vidaPersonajes);
                 System.out.println("====== " + pnjSeleccionado.nombre + " ======");
@@ -228,9 +230,25 @@ public class Main {
                 }
 
                 if (enemigoAzar.vidaPersonajes <= 0) {
+                    pelea = false;
+                    System.out.println("Has logrado exorcizar a la maldición! Ahora, puedes pasar por la tienda antes de seguir exorcizando maldiciones.");
+                    System.out.println("1. Siguiente batalla");
+                    System.out.println("2. Ir a la tienda de objetos");
 
+                    int eleccionFinDePelea = sc.nextInt();
+
+                    if (eleccionFinDePelea == 1) {
+                        pelea = true;
+                    } else {
+
+                    }
+
+                } else if (pnjSeleccionado.vidaPersonajes <= 0) {
+                    System.out.println();
+                    pelea = false;
                 }
             }
+
         }
     }
 }
