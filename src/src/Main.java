@@ -240,7 +240,7 @@ public class Main {
                     if (eleccionFinDePelea == 1) {
                         pelea = true;
                     } else {
-
+                        Tienda.tiendaObjetos(pnjSeleccionado, objetos);
                     }
 
                 } else if (pnjSeleccionado.vidaPersonajes <= 0) {
