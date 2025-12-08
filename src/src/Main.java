@@ -241,10 +241,11 @@ public class Main {
                         pelea = true;
                     } else {
                         Tienda.tiendaObjetos(pnjSeleccionado, objetos);
+                        pelea = true;
                     }
 
                 } else if (pnjSeleccionado.vidaPersonajes <= 0) {
-                    System.out.println();
+                    System.out.println("Has fracasado en tu misión de exorcizar maldiciones, puedes volver a intentarlo");
                     pelea = false;
                 }
             }
