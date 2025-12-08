@@ -4,14 +4,15 @@ public class Tienda {
     public static void tiendaObjetos(Personajes personaje, String[] objetos) {
         Scanner sc = new Scanner(System.in);
         boolean tienda = true;
+        int [] costes = {3, 5, 20, 3};
         while (tienda) {
 
             System.out.println("===== TIENDA =====");
             System.out.println("Yenes: " + personaje.yenes);
-            System.out.println("1. " + objetos[0] + " - 10 yenes");
-            System.out.println("2. " + objetos[1] + " - 15 yenes");
+            System.out.println("1. " + objetos[0] + " - 3 yenes");
+            System.out.println("2. " + objetos[1] + " - 5 yenes");
             System.out.println("3. " + objetos[2] + " - 10 yenes");
-            System.out.println("4. " + objetos[3] + " - 15 yenes");
+            System.out.println("4. " + objetos[3] + " - 3 yenes");
             System.out.println("5. Salir");
 
             int compra = sc.nextInt();
@@ -21,11 +22,11 @@ public class Tienda {
                 tienda = false;
 
             } else if (compra == 1 || compra == 2) {
-                int precio = (compra == 1) ? 10 : 15;
+                int precio = costes [compra - 1];
 
                 if (personaje.yenes >= precio) {
 
-                    boolean agregado = false;
+                    boolean espacioOcupado = false;
 
                     for (int i = 0; i < personaje.inventario.length; i++) {
 
@@ -33,14 +34,14 @@ public class Tienda {
 
                             personaje.inventario[i] = objetos[compra - 1];
                             personaje.yenes -= precio;
-                            System.out.println("Compraste: " + objetos[compra - 1]);
-                            agregado = true;
+                            System.out.println("Has obtenido: " + objetos[compra - 1]);
+                            espacioOcupado = true;
                             break;
                         }
 
                     }
 
-                    if (!agregado) {
+                    if (!espacioOcupado) {
                         System.out.println("No tienes más espacio en tu inventario");
                     }
 

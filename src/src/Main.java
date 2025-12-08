@@ -12,6 +12,7 @@ public class Main {
         int eleccionBatalla;
         int ataqueEnemigo;
         int dmgEnemigo;
+        int dineroGanado;
         boolean juego = true;
         boolean pelea = true;
 
@@ -231,7 +232,11 @@ public class Main {
 
                 if (enemigoAzar.vidaPersonajes <= 0) {
                     pelea = false;
-                    System.out.println("Has logrado exorcizar a la maldición! Ahora, puedes pasar por la tienda antes de seguir exorcizando maldiciones.");
+                    dineroGanado = random.nextInt(6);
+                    pnjSeleccionado.yenes += dineroGanado;
+                    System.out.println("Has logrado exorcizar a la maldición! \n" +
+                            "Has obtenido " + dineroGanado + " yenes \n" +
+                            "Ahora, puedes pasar por la tienda antes de seguir exorcizando maldiciones.");
                     System.out.println("1. Siguiente batalla");
                     System.out.println("2. Ir a la tienda de objetos");
 
@@ -245,11 +250,19 @@ public class Main {
                     }
 
                 } else if (pnjSeleccionado.vidaPersonajes <= 0) {
-                    System.out.println("Has fracasado en tu misión de exorcizar maldiciones, puedes volver a intentarlo");
+                    System.out.println("Has fracasado en tu misión de exorcizar maldiciones");
                     pelea = false;
                 }
             }
+            System.out.println("Quieres volver a intentarlo?");
+            System.out.println("1. SI | 2. NO ");
 
+            int finalDeJuego = sc.nextInt();
+
+            if (finalDeJuego == 2){
+                System.out.println("Las maldiciones siempre seguirán ahí para cuando decidas volver a intentar exorcizarlas, hasta la próxima!");
+                juego = false;
+            }
         }
     }
 }
