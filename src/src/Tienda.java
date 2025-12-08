@@ -21,7 +21,7 @@ public class Tienda {
                 System.out.println("Hasta otra!");
                 tienda = false;
 
-            } else if (compra == 1 || compra == 2) {
+            } else if (compra == 1 || compra == 2 || compra == 3 || compra == 4) {
                 int precio = costes [compra - 1];
 
                 if (personaje.yenes >= precio) {
@@ -38,7 +38,6 @@ public class Tienda {
                             espacioOcupado = true;
                             break;
                         }
-
                     }
 
                     if (!espacioOcupado) {
