@@ -74,7 +74,7 @@ public class Main {
             System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, se ha puesto en tu camino" + enemigoAzar.nombre);
 
             while (pelea) {
-                System.out.println("=====" + enemigoAzar.nombreBatalla + "=====");
+                System.out.println("===== " + enemigoAzar.nombreBatalla + "=====");
                 System.out.println("PS: " + enemigoAzar.vidaPersonajes);
                 System.out.println("====== " + pnjSeleccionado.nombre + " ======");
                 System.out.println("PS: " + pnjSeleccionado.vidaPersonajes + " | Energia Maldita: " + pnjSeleccionado.energiaMaldita);
