@@ -109,21 +109,21 @@ public class Personajes {
     public Personajes (String tipoEnemigo) {
         if (tipoEnemigo.equals("Segundo Grado")){
             this.nombre = " una Maldición de segundo grado";
-            this.nombreBatalla = " Maldición de Segundo grado ";
+            this.nombreBatalla = "Maldición de Segundo grado ";
             this.vidaPersonajes = 300;
             this.vidaMaxEnemigo = 300;
             this.dmgAtaqueFisico = 30;
             this.multiplicadorCritico = dmgAtaqueFisico * 1.3f;
         } else if (tipoEnemigo.equals("Primer Grado")) {
             this.nombre = " una Maldición de primer grado";
-            this.nombreBatalla = " Maldición de Primer Grado ";
+            this.nombreBatalla = "Maldición de Primer Grado ";
             this.vidaPersonajes = 550;
             this.vidaMaxEnemigo = 550;
             this.dmgAtaqueFisico = 40;
             this.multiplicadorCritico = dmgAtaqueFisico * 1.6f;
         } else if (tipoEnemigo.equals("Sukuna")) {
             this.nombre = " Sukuna, Rey de las maldiciones y el hechicero más fuerte de la historia";
-            this.nombreBatalla = " Sukuna ";
+            this.nombreBatalla = "Sukuna ";
             this.vidaPersonajes = 1000;
             this.vidaMaxEnemigo = 1000;
             this.dmgAtaqueFisico = 55;
