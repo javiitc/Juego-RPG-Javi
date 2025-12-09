@@ -251,9 +251,17 @@ public class Main {
                         pelea = true;
                     }
 
+                    pnjSeleccionado.vidaPersonajes += (pnjSeleccionado.vidaMaxima / 3);
+                    if (pnjSeleccionado.vidaPersonajes > pnjSeleccionado.vidaMaxima) {
+                        pnjSeleccionado.vidaPersonajes = pnjSeleccionado.vidaMaxima;
+                    }
+                    pnjSeleccionado.energiaMaldita += (pnjSeleccionado.energiaMalditaMax / 2);
+                    if (pnjSeleccionado.energiaMaldita > pnjSeleccionado.energiaMalditaMax) {
+                        pnjSeleccionado.energiaMaldita = pnjSeleccionado.energiaMalditaMax;
+                    }
                     enemigoAleatorio = random.nextInt(3);
                     enemigoAzar = enemigos[enemigoAleatorio];
-                    enemigos[enemigoAleatorio].vidaPersonajes =
+                    enemigos[enemigoAleatorio].vidaPersonajes = enemigos[enemigoAleatorio].vidaMaxEnemigo;
 
                 } else if (pnjSeleccionado.vidaPersonajes <= 0) {
                     System.out.println("Has fracasado en tu misión de exorcizar maldiciones");
@@ -265,7 +273,15 @@ public class Main {
 
             int finalDeJuego = sc.nextInt();
 
-            if (finalDeJuego == 2){
+            if (finalDeJuego == 1) {
+                confirmacion = true;
+                pelea = true;
+
+                pnjSeleccionado = new Personajes();
+                enemigoAleatorio = random.nextInt(3);
+                enemigoAzar = enemigos[enemigoAleatorio];
+                enemigos[enemigoAleatorio].vidaPersonajes = enemigos[enemigoAleatorio].vidaMaxEnemigo;
+            } else if (finalDeJuego == 2){
                 System.out.println("Las maldiciones siempre seguirán ahí para cuando decidas volver a intentar exorcizarlas, hasta la próxima!");
                 juego = false;
             }
