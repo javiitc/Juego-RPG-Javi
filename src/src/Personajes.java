@@ -27,10 +27,10 @@ public class Personajes {
         descripcionPersonaje = "Satoru Gojo, hechicero de grado especial, poseedor de los seis ojos y el ritual del infinito. Se le conoce como el hechicero más fuerte de la actualidad";
         expansionesDominio = "Vacío Infinito";
         tecnicaEspecial = "Ritual del vacío: Purpura";
-        vidaPersonajes = 230;
-        vidaMaxima = 230;
-        energiaMaldita = 150;
-        energiaMalditaMax = 150;
+        vidaPersonajes = 300;
+        vidaMaxima = 300;
+        energiaMaldita = 180;
+        energiaMalditaMax = 180;
         dmgAtaqueFisico = 70;
         multiplicadorCritico = dmgAtaqueFisico * 1.5f;
         dmgAtaqueEspecial = 120;
@@ -43,12 +43,12 @@ public class Personajes {
 
         nombre = "Yuta Okkotsu";
         descripcionPersonaje = "Yuta Okkotsu, hechicero de grado especial, capaz de invocar a la reina de las maldiciones, Rikka. Desprende una energia maldita mayor a la del hechicero mas fuerte de la actualidad.";
-        vidaPersonajes = 150;
-        vidaMaxima = 150;
+        vidaPersonajes = 230;
+        vidaMaxima = 230;
         expansionesDominio = "Amor Mutuo y Verdadero";
         tecnicaEspecial = "Mimetismo: Discurso maldito";
-        energiaMaldita = 250;
-        energiaMalditaMax = 250;
+        energiaMaldita = 280;
+        energiaMalditaMax = 280;
         dmgAtaqueFisico = 55;
         multiplicadorCritico = dmgAtaqueFisico * 1.2f;
         dmgAtaqueEspecial = 100;
@@ -62,16 +62,16 @@ public class Personajes {
 
         nombre = "Yuji Itadori";
         descripcionPersonaje = "Yuji Itadori, discipulo de Gojo, tiene una resistencia y fuerza sobrehumanas. Debido a sus capcidades y su origen, fue el unico recipiente válido para contener a Sukuna, el Rey de las maldiciones. ";
-        vidaPersonajes = 180;
-        vidaMaxima = 180;
+        vidaPersonajes = 270;
+        vidaMaxima = 270;
         expansionesDominio = "Separador de almas";
         tecnicaEspecial = "Black Flash";
-        energiaMaldita = 100;
-        energiaMalditaMax = 100;
-        dmgAtaqueFisico = 40;
+        energiaMaldita = 150;
+        energiaMalditaMax = 150;
+        dmgAtaqueFisico = 65;
         multiplicadorCritico = dmgAtaqueFisico * 1.8f;
-        dmgAtaqueEspecial = 150;
-        dmgExpansionDominio = 120;
+        dmgAtaqueEspecial = 160;
+        dmgExpansionDominio = 130;
         inventario = new String [10];
         yenes = 5;
     }
@@ -80,13 +80,13 @@ public class Personajes {
 
         nombre = "Toji Fushiguro";
         descripcionPersonaje = "Toji Fushiguro. Exiliado del clan zenin por no tener energia maldita, pero siendo el humano perfecto, el unico capaz de haber dejado al borde la muerte al hechicero más fuerte de la actualidad.";
-        vidaPersonajes = 170;
-        vidaMaxima = 170;
+        vidaPersonajes = 300;
+        vidaMaxima = 300;
         expansionesDominio = "Lanza del Cielo Invertida";
         tecnicaEspecial = "Nube Intinerante";
-        energiaMaldita = 50;
-        energiaMalditaMax = 50;
-        dmgAtaqueFisico = 75;
+        energiaMaldita = 80;
+        energiaMalditaMax = 80;
+        dmgAtaqueFisico = 85;
         multiplicadorCritico = dmgAtaqueFisico * 2.2f;
         dmgAtaqueEspecial = 130;
         dmgExpansionDominio = 150;
