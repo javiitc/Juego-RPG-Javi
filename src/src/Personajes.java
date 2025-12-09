@@ -127,7 +127,7 @@ public class Personajes {
             this.vidaPersonajes = 1000;
             this.vidaMaxEnemigo = 1000;
             this.dmgAtaqueFisico = 55;
-            this.multiplicadorCritico = 2.0f;
+            this.multiplicadorCritico = dmgAtaqueFisico * 2.0f;
         }
     }
 

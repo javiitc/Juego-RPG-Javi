@@ -93,16 +93,18 @@ public class Main {
                         System.out.println("Has atacado al enemigo!");
                         enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgAtaqueFisico;
 
-                        ataqueEnemigo = random.nextInt(2);
-                        dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
-                        if (ataqueEnemigo == 0) {
-                            System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
-                            pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
-                        } else {
-                            System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
-                            pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
+                        if (enemigoAzar.vidaPersonajes > 0) {
+                            ataqueEnemigo = random.nextInt(2);
+                            dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
+                            if (ataqueEnemigo == 0) {
+                                System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                                pnjSeleccionado.vidaPersonajes -= dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            } else {
+                                System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                                pnjSeleccionado.vidaPersonajes -= (int) dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            }
                         }
                         break;
 
@@ -111,17 +113,20 @@ public class Main {
                         enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgAtaqueEspecial;
                         pnjSeleccionado.energiaMaldita -= 30;
 
-                        ataqueEnemigo = random.nextInt(2);
-                        dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
-                        if (ataqueEnemigo == 0) {
-                            System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
-                            pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
-                        } else {
-                            System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
-                            pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
+                        if (enemigoAzar.vidaPersonajes > 0) {
+                            ataqueEnemigo = random.nextInt(2);
+                            dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
+                            if (ataqueEnemigo == 0) {
+                                System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                                pnjSeleccionado.vidaPersonajes -= dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            } else {
+                                System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                                pnjSeleccionado.vidaPersonajes -= (int) dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            }
                         }
+
                         break;
 
                     case 3:
@@ -130,16 +135,18 @@ public class Main {
                         enemigoAzar.vidaPersonajes -= pnjSeleccionado.dmgExpansionDominio;
                         pnjSeleccionado.energiaMaldita -= 50;
 
-                        ataqueEnemigo = random.nextInt(2);
-                        dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
-                        if (ataqueEnemigo == 0) {
-                            System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
-                            pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
-                        } else {
-                            System.out.println(enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
-                            pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
+                        if (enemigoAzar.vidaPersonajes > 0) {
+                            ataqueEnemigo = random.nextInt(2);
+                            dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
+                            if (ataqueEnemigo == 0) {
+                                System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                                pnjSeleccionado.vidaPersonajes -= dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            } else {
+                                System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                                pnjSeleccionado.vidaPersonajes -= (int) dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            }
                         }
                         break;
 
@@ -149,16 +156,18 @@ public class Main {
                         System.out.println("El enemigo ha recibido: " + pnjSeleccionado.multiplicadorCritico + " de daño!");
                         pnjSeleccionado.energiaMaldita -= 20;
 
-                        ataqueEnemigo = random.nextInt(2);
-                        dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
-                        if (ataqueEnemigo == 0) {
-                            System.out.println(enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
-                            pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
-                        } else {
-                            System.out.println(enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
-                            pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
-                            System.out.println("Daño recibido: " + dmgEnemigo);
+                        if (enemigoAzar.vidaPersonajes > 0) {
+                            ataqueEnemigo = random.nextInt(2);
+                            dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
+                            if (ataqueEnemigo == 0) {
+                                System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                                pnjSeleccionado.vidaPersonajes -= dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            } else {
+                                System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                                pnjSeleccionado.vidaPersonajes -= (int) dmgEnemigo;
+                                System.out.println("Daño recibido: " + dmgEnemigo);
+                            }
                         }
                         break;
 
@@ -229,6 +238,7 @@ public class Main {
                     case 7:
                         System.out.println("Has decidido retirarte de la batalla y la maldición se ha ido a por ciudadanos inocentes.");
                         pnjSeleccionado.yenes -= 3;
+                        pelea = false;
                         break;
                 }
 
