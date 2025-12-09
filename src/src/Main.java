@@ -24,6 +24,7 @@ public class Main {
         int enemigoAleatorio = random.nextInt(3);
         Personajes enemigoAzar = enemigos[enemigoAleatorio];
 
+
         String[] objetos = {"Ritual Inverso Maldito", "Bendición de Utahime", "Potenciador de Utahime y el director Gakuganji", "Dedo de Sukuna"};
 
 
@@ -64,6 +65,7 @@ public class Main {
                 }
             }
 
+
             int[] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio, (int) pnjSeleccionado.multiplicadorCritico};
             int[] iteraccionEnemigo = {enemigoAzar.dmgAtaqueFisico, (int) enemigoAzar.multiplicadorCritico};
 
@@ -94,11 +96,11 @@ public class Main {
                         ataqueEnemigo = random.nextInt(2);
                         dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
                         if (ataqueEnemigo == 0) {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                            System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
                             pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         } else {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                            System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
                             pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         }
@@ -112,11 +114,11 @@ public class Main {
                         ataqueEnemigo = random.nextInt(2);
                         dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
                         if (ataqueEnemigo == 0) {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                            System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
                             pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         } else {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                            System.out.println(enemigoAzar.nombreBatalla + "ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
                             pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         }
@@ -131,11 +133,11 @@ public class Main {
                         ataqueEnemigo = random.nextInt(2);
                         dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
                         if (ataqueEnemigo == 0) {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
+                            System.out.println(enemigoAzar.nombreBatalla + "te ha hecho un ataque directo!");
                             pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         } else {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                            System.out.println(enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
                             pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         }
@@ -150,11 +152,11 @@ public class Main {
                         ataqueEnemigo = random.nextInt(2);
                         dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
                         if (ataqueEnemigo == 0) {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
+                            System.out.println(enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
                             pnjSeleccionado.vidaPersonajes -= enemigoAzar.dmgAtaqueFisico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         } else {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                            System.out.println(enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
                             pnjSeleccionado.vidaPersonajes -= (int) enemigoAzar.multiplicadorCritico;
                             System.out.println("Daño recibido: " + dmgEnemigo);
                         }
@@ -216,10 +218,10 @@ public class Main {
                         ataqueEnemigo = random.nextInt(2);
                         dmgEnemigo = iteraccionEnemigo[ataqueEnemigo];
                         if (ataqueEnemigo == 0) {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
+                            System.out.println(enemigoAzar.nombreBatalla + " te ha hecho un ataque directo!");
                             System.out.println("Debido al Dominio Simple no has recibido daño.");
                         } else {
-                            System.out.println("La " + enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
+                            System.out.println(enemigoAzar.nombreBatalla + " ha potenciado su ataque con energía maldita y te ha hecho un golpe crítico");
                             System.out.println("Debido al Dominio Simple no has recibido daño.");
                         }
                         break;
@@ -248,6 +250,10 @@ public class Main {
                         Tienda.tiendaObjetos(pnjSeleccionado, objetos);
                         pelea = true;
                     }
+
+                    enemigoAleatorio = random.nextInt(3);
+                    enemigoAzar = enemigos[enemigoAleatorio];
+                    enemigos[enemigoAleatorio].vidaPersonajes =
 
                 } else if (pnjSeleccionado.vidaPersonajes <= 0) {
                     System.out.println("Has fracasado en tu misión de exorcizar maldiciones");
