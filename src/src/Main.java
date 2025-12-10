@@ -205,11 +205,13 @@ public class Main {
                                         System.out.println("Has recibido la bendición de Utahime, tu daño fisico y de técnica Maldita ha aumentado!");
                                         pnjSeleccionado.dmgAtaqueFisico += 25;
                                         pnjSeleccionado.dmgAtaqueEspecial += 15;
+                                        pnjSeleccionado.multiplicadorCritico = pnjSeleccionado.dmgAtaqueFisico * pnjSeleccionado.multiplicador;
                                     } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[2]) {
                                         System.out.println("El director Gakuganji y Utahime te estan ayudando con sus rituales! Tu daño fisico, de técnica Maldita y de la expansión de dominio ha aumentado considerablemente!");
                                         pnjSeleccionado.dmgAtaqueFisico += 50;
                                         pnjSeleccionado.dmgAtaqueEspecial += 40;
                                         pnjSeleccionado.dmgExpansionDominio += 35;
+                                        pnjSeleccionado.multiplicadorCritico = pnjSeleccionado.dmgAtaqueFisico * pnjSeleccionado.multiplicador;
                                     } else if (pnjSeleccionado.inventario[eleccionInventario] == objetos[3]) {
                                         System.out.println("Has consumido un dedo de Sukuna! Tu energia maldita ha sido recuperada en su totalidad");
                                         pnjSeleccionado.energiaMaldita = pnjSeleccionado.energiaMalditaMax;

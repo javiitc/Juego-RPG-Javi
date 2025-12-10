@@ -12,6 +12,7 @@ public class Personajes {
         int energiaMaldita;
         int energiaMalditaMax;
         float multiplicadorCritico;
+        float multiplicador;
         int dmgAtaqueFisico;
         int dmgAtaqueEspecial;
         int dmgExpansionDominio;
@@ -33,6 +34,7 @@ public class Personajes {
         energiaMalditaMax = 180;
         dmgAtaqueFisico = 70;
         multiplicadorCritico = dmgAtaqueFisico * 1.5f;
+        multiplicador = 1.5f;
         dmgAtaqueEspecial = 120;
         dmgExpansionDominio = 250;
         inventario = new String [10];
@@ -51,6 +53,7 @@ public class Personajes {
         energiaMalditaMax = 280;
         dmgAtaqueFisico = 55;
         multiplicadorCritico = dmgAtaqueFisico * 1.2f;
+        multiplicador = 1.2f;
         dmgAtaqueEspecial = 100;
         dmgExpansionDominio = 180;
         inventario = new String [10];
@@ -70,6 +73,7 @@ public class Personajes {
         energiaMalditaMax = 150;
         dmgAtaqueFisico = 65;
         multiplicadorCritico = dmgAtaqueFisico * 1.8f;
+        multiplicador = 1.8f;
         dmgAtaqueEspecial = 160;
         dmgExpansionDominio = 130;
         inventario = new String [10];
@@ -88,6 +92,7 @@ public class Personajes {
         energiaMalditaMax = 80;
         dmgAtaqueFisico = 85;
         multiplicadorCritico = dmgAtaqueFisico * 2.2f;
+        multiplicador = 2.2f;
         dmgAtaqueEspecial = 130;
         dmgExpansionDominio = 150;
         inventario = new String [10];
