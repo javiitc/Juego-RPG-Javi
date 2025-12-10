@@ -1,11 +1,11 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//Este código/juego RPG ha sido completado después de mucho sufrimiento y desesperación por todos los errores que salían cada 2x3, si tocas algo, probablemente deje de funcionar (por favor no lo hagas) :)
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-
+//En esta parte del programa declaramos todas las variables que vamos a utilizar más de una vez a lo largo del código
         int seleccionPersonaje;
         boolean confirmacion = true;
         int confirmar;
@@ -15,7 +15,7 @@ public class Main {
         int dineroGanado;
         boolean juego = true;
         boolean pelea = true;
-
+//Aquí declaramos el objeto Personaje y loe enemigos a los que nos vamos a enfrentar
         Personajes pnjSeleccionado = new Personajes();
         Personajes[] enemigos = new Personajes[3];
         enemigos[0] = new Personajes("Segundo Grado");
@@ -32,8 +32,9 @@ public class Main {
                 "Este mundo esta lleno de maldiciones que nacen de las malas emociones de las personas. Tu deber como hechicero es exorcizar a todas las maldiciones posibles y no morir en el intento, \n" +
                 "Ahora mismo esta ocurriendo un incidente en Shibuya, las maldiciones están atacando la ciudad, y se necesitan a todos los hechiceros posibles para arreglar la situación. \n" +
                 "Exorciza a todas las maldiciones que puedas, y cuidado con el rey de las maldiciones, Sukuna");
-
+//Aquí comienza el bucle principal, donde transcurre todo el juego
         while (juego) {
+            //Este primer bucle, dentro del principal, es para elegir personaje, y una vez confirmes tu elección el bucle parará
             while (confirmacion) {
                 System.out.println("Ahora elige un hechicero para continuar (Ten en cuenta que cada uno tiene caracteristicas y ataques unicos)");
                 System.out.println("1. Satoru Gojo \n" +
@@ -65,14 +66,14 @@ public class Main {
                 }
             }
 
-
+            //En esta parte declaramos los arrays de las acciones que puede realizar nuestro personaje y las acciones del enemigo (que estás serán aleatorias)
             int[] iteraccion = {pnjSeleccionado.dmgAtaqueFisico, pnjSeleccionado.dmgAtaqueEspecial, pnjSeleccionado.dmgExpansionDominio, (int) pnjSeleccionado.multiplicadorCritico};
             int[] iteraccionEnemigo = {enemigoAzar.dmgAtaqueFisico, (int) enemigoAzar.multiplicadorCritico};
 
             System.out.println(pnjSeleccionado.nombre + " , tu deber es exorcizar a todas las maldiciones posibles que hay ahora mismo en Shibuya, de segundo o primer grado, e incluso al rey de las maldiciones \n" +
                     "(si es que logras derrotarlo) en caso de que te encuentres con él. Buena suerte!");
             System.out.println("\n" + "Has llegado a Shibuya, mientras observas la situación y te adentras en la ciudad, se ha puesto en tu camino" + enemigoAzar.nombre);
-
+            //Inicia el bucle de la pelea
             while (pelea) {
                 System.out.println("===== " + enemigoAzar.nombreBatalla + "=====");
                 System.out.println("PS: " + enemigoAzar.vidaPersonajes);
@@ -87,7 +88,7 @@ public class Main {
                         "7. Rendirse");
 
                 eleccionBatalla = sc.nextInt();
-
+              //Usamos swtich para todas las acciones que puede realizar nuestro personaje, cada una con sus diferentes efectos (ataque básico, especial, inventario,...)
                 switch (eleccionBatalla) {
                     case 1:
                         System.out.println("Has atacado al enemigo!");
@@ -243,7 +244,7 @@ public class Main {
                         pelea = false;
                         break;
                 }
-
+               //En esta parte declaramos el fin de la pelea, dependiendo si ha sido el jugador el que ha ganado o ha perdido
                 if (enemigoAzar.vidaPersonajes <= 0) {
                     pelea = false;
                     dineroGanado = random.nextInt(6);
@@ -255,14 +256,14 @@ public class Main {
                     System.out.println("2. Ir a la tienda de objetos");
 
                     int eleccionFinDePelea = sc.nextInt();
-
+                    //Dependiendo de si se quiere ir a otra pelea o ir a la tienda de objetos, el bucle de pelea volverá a empezar inmediatamente o nada más salir de la tienda
                     if (eleccionFinDePelea == 1) {
                         pelea = true;
                     } else {
-                        Tienda.tiendaObjetos(pnjSeleccionado, objetos);
+                        Tienda.tiendaObjetos(pnjSeleccionado, objetos); //Para la tienda de objetos, llamamos a la función para que se ejecute (así quedaba más limpio el programa principal)
                         pelea = true;
                     }
-
+                   //Al final de la pelea, hacemos que el personaje recupere un tercio de la vida máxima y la mitad de su energía maldita máxima
                     pnjSeleccionado.vidaPersonajes += (pnjSeleccionado.vidaMaxima / 3);
                     if (pnjSeleccionado.vidaPersonajes > pnjSeleccionado.vidaMaxima) {
                         pnjSeleccionado.vidaPersonajes = pnjSeleccionado.vidaMaxima;
@@ -271,6 +272,7 @@ public class Main {
                     if (pnjSeleccionado.energiaMaldita > pnjSeleccionado.energiaMalditaMax) {
                         pnjSeleccionado.energiaMaldita = pnjSeleccionado.energiaMalditaMax;
                     }
+                    //En esta parte declaramos un nuevo enemigo al azar entre los 3 que hay, y actualizamos tanto la vida como sus acciones de ataque
                     enemigoAleatorio = random.nextInt(3);
                     enemigoAzar = enemigos[enemigoAleatorio];
                     enemigos[enemigoAleatorio].vidaPersonajes = enemigos[enemigoAleatorio].vidaMaxEnemigo;
@@ -282,22 +284,23 @@ public class Main {
                     pelea = false;
                 }
             }
+            //En caso que sea nuestro personaje el que pierde, el bucle pelea se detiene y pasamos a la ultima parte, de si se quiere volver a intentar o no
             System.out.println("Quieres volver a intentarlo?");
             System.out.println("1. SI | 2. NO ");
 
             int finalDeJuego = sc.nextInt();
 
-            if (finalDeJuego == 1) {
+            if (finalDeJuego == 1) { //En caso que SI, el bucle confirmación, para elegir personaje, se vuelve a activar y el de pelea también
                 confirmacion = true;
                 pelea = true;
-
+                //Volvemos a declarar el nuevo personaje y los enemigos (si no es de esta forma, al momento de seleccionar nuevo personaje se guardarían los stats del primero seleccionado
                 pnjSeleccionado = new Personajes();
                 enemigoAleatorio = random.nextInt(3);
                 enemigoAzar = enemigos[enemigoAleatorio];
                 enemigos[enemigoAleatorio].vidaPersonajes = enemigos[enemigoAleatorio].vidaMaxEnemigo;
                 iteraccionEnemigo[0] = enemigoAzar.dmgAtaqueFisico;
                 iteraccionEnemigo[1] = (int) enemigoAzar.multiplicadorCritico;
-            } else if (finalDeJuego == 2){
+            } else if (finalDeJuego == 2){ //En caso de que no el bucle principal del juego, se detiene y se acaba el programa
                 System.out.println("Las maldiciones siempre seguirán ahí para cuando decidas volver a intentar exorcizarlas, hasta la próxima!");
                 juego = false;
             }

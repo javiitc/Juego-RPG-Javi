@@ -17,7 +17,6 @@ public class Personajes {
         int dmgAtaqueEspecial;
         int dmgExpansionDominio;
 
-        int seleccionPersonaje;
         int yenes;
         String [] inventario = new String[10];
 
