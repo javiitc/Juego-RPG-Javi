@@ -4,7 +4,7 @@ public class Tienda {
     public static void tiendaObjetos(Personajes personaje, String[] objetos) {
         Scanner sc = new Scanner(System.in);
         boolean tienda = true;
-        int [] costes = {3, 5, 20, 3};
+        int [] costes = {3, 5, 10, 3};
         while (tienda) {
 
             System.out.println("===== TIENDA =====");
